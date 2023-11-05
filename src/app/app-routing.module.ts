@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from './webside/component/profile/profile.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+{
+  path:"profile",
+  loadChildren: ()=> import('./webside/webside.module').then(m => m.WebsideModule)
+}
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
