@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
-  {
-    path: "profile",
-    component: ProfileComponent
-  }
+  { path: '', component: ProfileComponent ,
+  children: [
+    {path:'', redirectTo: 'profile', pathMatch:'full'}
+  ]}
 ];
 
 @NgModule({

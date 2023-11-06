@@ -1,0 +1,15 @@
+@import './../../../themes/variables';
+
+h1 {
+  font-family: Inria Serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card_body {
+  background: $gradiente;
+  width: 820px;
+  height: 530px;
+}

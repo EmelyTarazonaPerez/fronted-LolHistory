@@ -4,7 +4,7 @@ import { ProfileComponent } from './webside/component/profile/profile.component'
 
 const routes: Routes = [
 {
-  path:"profile",
+  path:'',
   loadChildren: ()=> import('./webside/webside.module').then(m => m.WebsideModule)
 }
 
