@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './webside/component/profile/profile.component';
 
 const routes: Routes = [
 {

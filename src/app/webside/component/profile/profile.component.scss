@@ -1,8 +1,9 @@
 @import './../../../themes/variables';
 
 h1 {
+  color: #FFF;
   font-family: Inria Serif;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -12,4 +13,21 @@ h1 {
   background: $gradiente;
   width: 820px;
   height: 530px;
+
+  h2 {
+    color: #FFF;
+    font-size: 23px;
+    font-family: Inria Serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+    color: #FFF;
+    text-align: center;
+  }
 }
+
+
