@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
-  porcentageWins =  50;
+  porcentageWins: number =  50;
 
 }
