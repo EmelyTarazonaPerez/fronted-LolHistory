@@ -1,0 +1,52 @@
+.container-h {
+  max-width: 748.509px;
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+
+  .box-mvc {
+    text-align: -webkit-center;
+    margin: 0px;
+
+    .figure-mvc {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+      background-color: #50C00B;
+      color: #188B15;
+      border-radius: 15px;
+      width: 35px;
+    }
+
+    img {
+      border: 3px solid #04E000;
+      background-color: #04E000;
+      border-radius: 40px;
+      width: 81px;
+    }
+  }
+
+
+  strong {
+    font-size: 15px;
+    display: block;
+    padding-bottom: 19px;
+  }
+
+  p {
+    font-size: 15px;
+    margin: 0px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  .info {
+    margin-left: 5rem;
+  }
+
+
+  .footer {
+    text-align: end;
+  }
+}
