@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProgressComponent } from '../share/component/progress.component'
+import { ProgressComponent } from '../share/component/progress.component';
+import { NabvarComponent } from './component/nabvar/nabvar.component'
 
 
 @NgModule({
   declarations: [
-    ProgressComponent
+    ProgressComponent,
+    NabvarComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ProgressComponent
+    ProgressComponent,
+    NabvarComponent
   ]
 })
 export class ShareModule { }
