@@ -1,4 +1,3 @@
-import { noop } from "rxjs"
 
 interface Profile {
   "id": String,
