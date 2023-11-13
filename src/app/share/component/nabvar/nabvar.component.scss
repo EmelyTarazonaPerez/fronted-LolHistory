@@ -1,3 +1,4 @@
+
 .title_LolHistory {
   font-size: 30px;
   color: #fff;
@@ -10,4 +11,37 @@ button {
   border-radius: 5px;
   margin: 10px;
   background: #215363;
+}
+
+input {
+  background-color: #283140;
+  border: none;
+  margin: 10px;
+  padding: 7.5px 7.5px 7.5px 30px;
+  border-bottom: 2px solid #fff;
+  font-family: 'Inria Serif', serif;
+
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+button:hover{
+  color: #fff;
+  background-color: #3487a2 !important;
+}
+
+.box-share-player{
+  padding-left: 60px;
+}
+
+.group-input {
+  position: relative;
+}
+
+.icono {
+  position: absolute;
+  left: 10px;
+  margin-top: 25px;
 }
