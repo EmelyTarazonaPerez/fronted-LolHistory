@@ -1,4 +1,3 @@
-
 interface Profile {
   "id": String,
   "puuid": String,
