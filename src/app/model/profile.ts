@@ -1,4 +1,4 @@
-interface Profile {
+export interface Profile {
   "id": String,
   "puuid": String,
   "name": String,
