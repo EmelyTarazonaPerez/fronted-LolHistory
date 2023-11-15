@@ -1,4 +1,4 @@
-interface  LeagueEntry {
+export interface  LeagueEntry {
   "leagueId": String,
   "queueType": String,
   "tier": String,

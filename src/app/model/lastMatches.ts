@@ -1,4 +1,4 @@
-interface LastMatches {
+export interface LastMatches {
   "info": Info
 }
 

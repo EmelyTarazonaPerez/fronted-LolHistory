@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProfileService } from 'src/app/service/profile.service';
+import { ProfileService } from 'src/app/service/profile/profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -14,5 +14,6 @@ export class ProfileComponent {
 
   ngOnInit(): void{
     this.serviceProfile.getAccount('GatitaRosh').subscribe(data => console.log(data))
+    this.serviceProfile.getLeaguePlayer('GatitaRosh').subscribe(data => console.log(data))
   }
 }
