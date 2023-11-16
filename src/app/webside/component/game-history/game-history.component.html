@@ -1,24 +1,31 @@
-<div class="card container-h m-2">
-  <div class="p-lg-1 p-0 d-flex justify-content-between align-items-center">
-    <p style="font-size: 10px;">Aram</p>
-    <button class="btn m-0 p-0" (click)="summaryDamage()">Detail</button>
-  </div>
-  <div class="card-body d-flex">
-    <figure class="box-mvc">
-      <img src="../../../../assets/MVC.svg" alt="mvc" />
-      <b class="figure-mvc">MVC</b>
-    </figure>
-    <article class="box-info d-flex">
-      <div class="info">
-        <strong>KDA</strong>
-        <p>4/15/20</p>
-      </div>
-      <div class="info">
-        <strong>Daño</strong>
-        <p>160.00k</p>
-      </div>
-      <p class="info">60% P. Kills</p>
-    </article>
-  </div>
-  <p class="footer" style="font-size: 10px; padding-right: 5px">3 de octubre 2023</p>
+<div *ngFor="let match of lasMatches">
+<div >
+
 </div>
+  <div [ngClass]="{'active': match.info.participants[0].win === true}" class="card container-h m-2">
+    <div class="p-lg-1 p-0 d-flex justify-content-between align-items-center">
+      <p style="font-size: 10px;">{{match.info.gameMode}}</p>
+      <button class="btn m-0 p-0" (click)="summaryDamage()">Detail</button>
+    </div>
+    <div class="card-body d-flex">
+      <figure class="box-mvc">
+        <img src="{{match.info.participants[0].iconoChampion}}" alt="mvc" />
+        <b class="figure-mvc">MVC</b>
+      </figure>
+      <article class="box-info d-flex">
+        <div class="info">
+          <strong>KDA</strong>
+          <p>{{match.info.participants[0].kills}}/{{match.info.participants[0].deaths}}/{{match.info.participants[0].assists}}
+          </p>
+        </div>
+        <div class="info">
+          <strong>Daño</strong>
+          <p>{{match.info.participants[0].totalDamageDealtToChampions}}</p>
+        </div>
+        <p class="info">{{match.info.participants[0].percentP}}% P. Kills</p>
+      </article>
+    </div>
+    <p class="footer" style="font-size: 10px; padding-right: 5px">3 de octubre 2023</p>
+  </div>
+</div>
+

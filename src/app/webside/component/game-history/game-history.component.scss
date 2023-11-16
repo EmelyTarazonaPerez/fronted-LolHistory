@@ -3,7 +3,6 @@
   text-align: center;
   font-family: 'Inria Serif', serif;
   color:#fff;
-  background: linear-gradient(90deg, #50C00B 0%, #499923 0.01%, rgba(58, 69, 86, 0.00) 100.03%, #3A4556 100.03%);
 
   .box-mvc {
     text-align: -webkit-center;
@@ -55,4 +54,10 @@
   .footer {
     text-align: end;
   }
+}
+
+.active {
+  background: linear-gradient(90deg, #B7253F 0%, rgba(58, 69, 86, 0.00) 100.03%, #3A4556 100.03%);
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.00);
 }

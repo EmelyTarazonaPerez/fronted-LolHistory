@@ -7,7 +7,7 @@ interface Info {
   "gameId": number,
   "gameMode": String,
   "gameStartTimestamp": number,
-  "participants": Participants
+  "participants": Participants[]
   "killsTeam": number
 }
 
@@ -23,7 +23,8 @@ interface Participants {
   "totalDamageDealtToChampions": number,
   "win": boolean,
   "gameId": number,
-  "percentP": number
+  "percentP": number,
+  "iconoChampion": String
 }
 
 
