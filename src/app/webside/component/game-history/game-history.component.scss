@@ -1,50 +1,101 @@
+.info-game {
+  border-bottom: 1px solid #fff;
+}
+
+.card-body {
+  padding-top: 10px !important;
+  position: relative;
+}
+
 .container-h {
   max-width: 748px;
   text-align: center;
-  font-family: 'Inria Serif', serif;
-  color:#fff;
+  background: linear-gradient(90deg, #B7253F 0%, rgba(58, 69, 86, 0.00) 100.03%, #3A4556 100.03%);
+  color: #fff;
 
-  .box-mvc {
-    text-align: -webkit-center;
-    margin: 0px;
+  .champion-img__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 
-    .figure-mvc {
-      display: block;
-      font-size: 10px;
-      margin-top: 5px;
-      background-color: #50C00B;
-      color: #188B15;
-      border-radius: 15px;
-      width: 35px;
+    .img {
+      object-fit: cover;
+      object-position: 70% 10%;
+      width: 100%;
+      height: 100%;
+
+      -webkit-mask: -webkit-radial-gradient(right,
+          circle,
+          transparent 6%,
+          black 141%);
+      -webkit-mask: radial-gradient(circle at right,
+          transparent 15%,
+          black 100%);
+      -webkit-filter: blur(0.5px);
+    }
+  }
+
+  .game-info__container {
+    z-index: 1;
+    padding: 0px 28px;
+
+    .icono-champion__container {
+      text-align: -webkit-center;
+      margin: 0px;
+      font-weight: 700;
+      z-index: 1;
+
+      .champion-icon {
+        border: 3px solid #E02800;
+        border-radius: 40px;
+        width: 50px;
+      }
+
+      .figure-mvc {
+        display: block;
+        font-size: 10px;
+        margin-top: 5px;
+        background-color: #E02800;
+        color: #e8dada;
+        border-radius: 15px;
+        width: 35px;
+      }
     }
 
-    img {
-      border: 3px solid #04E000;
-      background-color: #04E000;
-      border-radius: 40px;
-      width: 50px;
+    .summary-game__container {
+      z-index: 1;
+    }
+    .summary-game__container  div p {
+      padding: 0rem 2rem;
     }
   }
 
-  .card-body{
-    padding: 0px 0px 0px 5px;
-  }
+  &.active {
+    background: linear-gradient(90deg, #50C00B 0%, #499923 0.01%, rgba(58, 69, 86, 0.00) 100.03%, #3A4556 100.03%);
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.00);
 
-  strong {
-    font-size: 13px;
-    display: block;
-    padding-bottom: 10px;
-  }
+    .icono-champion__container {
+      text-align: -webkit-center;
+      z-index: 1;
 
-  p {
-    font-size: 13px;
-    margin: 0px;
-  }
+      .champion-icon {
+        border: 3px solid #50C00B !important;
+      }
 
-  button {
-    font-size: 15px;
-    font-size: 10px;
-    color: #fff;
+      .figure-mvc {
+        display: block;
+        font-size: 10px;
+        margin-top: 5px;
+        background-color: #50C00B !important;
+        color: #188B15 !important;
+        border-radius: 15px;
+        width: 35px;
+      }
+    }
   }
 
   .info {
@@ -56,8 +107,21 @@
   }
 }
 
-.active {
-  background: linear-gradient(90deg, #B7253F 0%, rgba(58, 69, 86, 0.00) 100.03%, #3A4556 100.03%);
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.00);
+//!--- estilos generales--!//
+
+strong {
+  font-size: 13px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 13px;
+  margin: 0px;
+}
+
+button {
+  font-size: 15px;
+  font-size: 10px;
+  color: #fff;
 }

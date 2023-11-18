@@ -7,11 +7,11 @@
           <p>{{league.leaguePoints}} pl</p>
         </div>
         <section class="card-body_section_ranked__info">
-          <b>{{league.queueType}}</b>
-          <p>{{league.tier}} {{league.rank}}</p>
+          <b>{{league.queueType | queueType }}</b>
+          <p>{{league.tier }} <span> {{league.rank }}</span></p>
           <p style="padding-bottom: 12px;">{{league.wins}}W - {{league.losses}}L</p>
-          <app-progress [porcentageWins]="league.winningP"></app-progress>
-          <p style="padding-top: 8px;">{{league.winningP}}% de victoria</p>
+          <app-progress [porcentageWins]="league.winningP * 100"></app-progress>
+          <p style="padding-top: 8px;">{{league.winningP | percent }} de victoria</p>
         </section>
       </div>
     </article>
