@@ -1,0 +1,19 @@
+<section class="card-body_section">
+  <div *ngFor="let league of leaguePlayer">
+    <article class="card-body_section__renked">
+      <div class="d-flex align-items-center justify-content-center">
+        <div>
+          <img src="../../../../assets/icono_ranked_solo.svg" alt="image_soloduo" />
+          <p>{{league.leaguePoints}} pl</p>
+        </div>
+        <section class="card-body_section_ranked__info">
+          <b>{{league.queueType | queueType }}</b>
+          <p>{{league.tier }} <span> {{league.rank }}</span></p>
+          <p style="padding-bottom: 12px;">{{league.wins}}W - {{league.losses}}L</p>
+          <app-progress [porcentageWins]="league.winningP * 100"></app-progress>
+          <p style="padding-top: 8px;">{{league.winningP | percent }} de victoria</p>
+        </section>
+      </div>
+    </article>
+  </div>
+</section>

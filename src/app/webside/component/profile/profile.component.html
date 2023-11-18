@@ -1,45 +1,12 @@
-
-  <div class="card card_body p-3" style="width: 18rem;">
-    <div class="card-body">
-      <section>
-        <figure class="d-flex align-items-center justify-content-center">
-          <img class="card-body_img" src="../../../../assets/icono_perfil.svg" alt="icono_perfil" />
-        </figure>
-        <h2 class="card-body_title">GatitaRosh (LAN)</h2>
-        <p class="card-body_level" style="color: aliceblue;">Nivel 1180</p>
-      </section>
-      <section class="card-body_section">
-        <article class="card-body_section__renked">
-          <div class="d-flex align-items-center justify-content-center">
-            <div>
-              <img src="../../../../assets/icono_ranked_solo.svg" alt="image_soloduo"/>
-              <p>57 pl</p>
-            </div>
-            <section class="card-body_section_ranked__info">
-              <b>Ranked Solo Duo</b>
-              <p>Silver 2</p>
-              <p style="padding-bottom: 12px;">5L - 5W</p>
-              <app-progress [porcentageWins]=50></app-progress>
-              <p style="padding-top: 8px;">50% de victoria</p>
-            </section>
-          </div>
-        </article>
-        <article class="card-body_section__renked">
-          <div class="d-flex align-items-center justify-content-center">
-            <div>
-              <img src="../../../../assets/icono_ranked_solo.svg" alt="image_soloduo"/>
-              <p>7 pl</p>
-            </div>
-            <section class="card-body_section_ranked__info">
-              <b>Ranked Flex</b>
-              <p>Silver 2</p>
-              <p style="padding-bottom: 12px;">5L - 5W</p>
-              <app-progress [porcentageWins]=25></app-progress>
-              <p style="padding-top: 8px;">50% de victoria</p>
-            </section>
-          </div>
-        </article>
-      </section>
-    </div>
+<div class="card card_body p-3" style="width: 18rem;">
+  <div class="card-body">
+    <section>
+      <figure class="d-flex align-items-center justify-content-center">
+        <img class="card-body_img" src="{{accountPlayer.linkIcono}}" alt="icono_perfil" />
+      </figure>
+      <h2 class="card-body_title">{{accountPlayer.name}}</h2>
+      <p class="card-body_level" style="color: aliceblue;">Nivel {{accountPlayer.summonerLevel}}</p>
+    </section>
+    <app-league></app-league>
   </div>
-
+</div>
