@@ -1,14 +1,24 @@
 body {
-  background-color:  #283140;
+  background-color:  #140e30;
   font-family: 'Poppins', sans-serif !important;
 }
 
 .box-games {
-  background-color: #262C35;
+  background-color: #56569742;
   margin-left: 40px;
   padding: 30px;
   justify-content: center;
   max-width: max-content;
   border-radius: 5px;
+  box-shadow: rgba(57, 50, 93, 58.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 5.3) 9px 80px 66px -68px inset;
 }
 
+.games-container{
+  position: relative;
+}
+
+h1 {
+  color: #ffffff85;
+  font-size: 25px;
+  text-align: center;
+}

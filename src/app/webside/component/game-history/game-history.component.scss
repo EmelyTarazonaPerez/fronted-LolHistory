@@ -12,6 +12,7 @@
   text-align: center;
   background: linear-gradient(90deg, #B7253F 0%, rgba(58, 69, 86, 0.00) 100.03%, #3A4556 100.03%);
   color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
   .champion-img__container {
     position: absolute;
@@ -30,10 +31,10 @@
       -webkit-mask: -webkit-radial-gradient(right,
           circle,
           transparent 6%,
-          black 141%);
+          black 280%);
       -webkit-mask: radial-gradient(circle at right,
           transparent 15%,
-          black 100%);
+          black 280%);
       -webkit-filter: blur(0.5px);
     }
   }
@@ -74,7 +75,7 @@
   }
 
   &.active {
-    background: linear-gradient(90deg, #50C00B 0%, #499923 0.01%, rgba(58, 69, 86, 0.00) 100.03%, #3A4556 100.03%);
+    background: linear-gradient(90deg, #4CAF50 0%, #0096888f 0.01%, rgb(75 63 87) 100.03%, #3A4556 100.03%);
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.00);
 
