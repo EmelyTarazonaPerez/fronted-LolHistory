@@ -12,9 +12,15 @@
             alt="champion image" />
         </div>
         <section class="game-info__container  d-flex">
-          <figure class="icono-champion__container">
-            <img class="champion-icon" src="{{match.info.participants[0].iconoChampion}}" alt="mvc" />
-            <b class="figure-mvc">MVC</b>
+          <figure class="icono-champion__container d-flex">
+            <div>
+              <img class="champion-icon" src="{{match.info.participants[0].iconoChampion}}" alt="mvc" />
+              <b class="figure-mvc">MVC</b>
+            </div>
+            <div class="spell-icon__container">
+              <img class="spell-icon" src="{{match.info.participants[0].iconSummoner1Id}}" alt="summoner-1"/>
+              <img class="spell-icon" src="{{match.info.participants[0].iconSummoner2Id}}" alt="summoner-2"/>
+            </div>
           </figure>
           <article class="summary-game__container d-flex">
             <div class="summary-kda">
@@ -28,7 +34,7 @@
               <p>{{match.info.participants[0].totalDamageDealtToChampions}}</p>
             </div>
             <div>
-              <p class="summary-percent">{{match.info.participants[0].percentP | percent}}P. Kills</p>
+              <p class="summary-percent">{{match.info.participants[0].challenges.killParticipation| percent}}P. Kills</p>
             </div>
           </article>
         </section>

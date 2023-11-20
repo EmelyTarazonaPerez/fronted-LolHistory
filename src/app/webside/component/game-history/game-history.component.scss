@@ -7,6 +7,19 @@
   position: relative;
 }
 
+.spell-icon__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+}
+
+.spell-icon {
+  width: 25px;
+  border: 1px solid #e8dada;
+  margin: 2px;
+  border-radius: 25px;
+}
+
 .container-h {
   max-width: 748px;
   text-align: center;
