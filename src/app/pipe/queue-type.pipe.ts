@@ -8,9 +8,9 @@ export class QueueTypePipe implements PipeTransform {
   transform(value: unknown, ...args: unknown[]): unknown {
 
     if(value === 'RANKED_FLEX_SR'){
-      return 'Ranked Flex';
+      return 'Flexible - 5v5';
     }
-    return 'Ranked Solo';
+    return 'Solo/Dúo';
   }
 
 }

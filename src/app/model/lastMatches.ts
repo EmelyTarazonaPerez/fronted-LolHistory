@@ -3,28 +3,28 @@ export interface LastMatches {
 }
 
 interface Info {
-  "gameEndTimestamp": number,
-  "gameId": number,
   "gameMode": String,
   "gameStartTimestamp": number,
   "participants": Participants[]
-  "killsTeam": number
 }
 
 interface Participants {
   "assists": number,
+  "challenges": Challenges,
   "championId": number,
   "championName": String,
   "deaths": number,
   "kills": number,
-  "puuid": String,
+  "iconSummoner1Id": String,
+  "iconSummoner2Id": String,
   "summonerName": String,
-  "teamId": number,
   "totalDamageDealtToChampions": number,
   "win": boolean,
-  "gameId": number,
-  "percentP": number,
   "iconoChampion": String
 }
 
+interface Challenges {
+    "kda": number,
+    "killParticipation" : number
+}
 

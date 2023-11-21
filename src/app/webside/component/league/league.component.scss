@@ -12,11 +12,21 @@
 }
 
 p {
-  font-size: 15px;
+  font-size: 12px;
   margin: 0px;
-  text-transform: lowercase;
+  font-weight: 200;
 }
 
-span {
-  text-transform: capitalize;
+.tier-img {
+  width: 135px;
+}
+
+.ranked-tier{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.ranked-pl {
+  font-weight: 300;
 }

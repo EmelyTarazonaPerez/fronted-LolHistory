@@ -1,6 +1,6 @@
 {
   "/servidor/*": {
-    "target": "http://localhost:8098",
+    "target": "http://localhost:8080",
     "secure": false,
     "pathRewrite":{
       "^/servidor":""
