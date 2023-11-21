@@ -16,7 +16,9 @@ export class LeagueComponent {
 
   ngOnChanges(){
     this.serviceProfile.getLeaguePlayer(this.namePlayer).subscribe(
-      data => this.leaguePlayer =data)
+      data => {
+        this.leaguePlayer = data
+      })
   }
 
   ngOnInit(): void {

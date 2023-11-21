@@ -11,13 +11,15 @@ import { ProfileService } from 'src/app/service/profile/profile.service';
 export class HomeComponent {
 
   namePlayer!: String;
-  lasMatches!: LastMatches[]
-
   constructor(private serviceProfile: ProfileService, private serviceMatch: GameHistoryService) { }
 
   ngOnInit(): void {
     this.serviceProfile.namePlayer$.subscribe(data => {
-      this.serviceMatch.getLastMatch().subscribe(data => console.log(data))
       this.namePlayer = data
+      console.log(data)
   })}
+
+  ngAfterViewInit(){
+    console.log("--afterView-init--")
+  }
 }

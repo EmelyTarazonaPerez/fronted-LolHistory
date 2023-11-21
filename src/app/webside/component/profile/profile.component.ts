@@ -18,7 +18,9 @@ export class ProfileComponent  {
 
   ngOnInit(): void {
     this.serviceProfile.namePlayer$.subscribe(data =>  {
-      this.serviceProfile.getAccount(data).subscribe(data => this.accountPlayer = data)
+      this.serviceProfile.getAccount(data).subscribe(data => {this.accountPlayer = data
+      console.log(data)
+      })
       this.namePlayer = data
     })
   }

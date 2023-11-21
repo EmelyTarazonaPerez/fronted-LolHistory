@@ -1,4 +1,5 @@
 import { Component, Input, SimpleChange, SimpleChanges } from '@angular/core';
+import { timeInterval, timeout } from 'rxjs';
 import { LastMatches } from 'src/app/model/lastMatches';
 import { GameHistoryService } from 'src/app/service/match/game-history.service';
 import { ProfileService } from 'src/app/service/profile/profile.service';
@@ -10,22 +11,29 @@ import { ProfileService } from 'src/app/service/profile/profile.service';
 })
 export class GameHistoryComponent {
 
-  @Input() lasMatches!: LastMatches[]
+  lasMatches!: LastMatches[]
   @Input() namePlayer!: String;
 
   constructor(private serviceMatch: GameHistoryService, private profile: ProfileService) { }
 
-  ngOnChanges(change: SimpleChanges) {
-    console.log(this.namePlayer)
-    if (change['namePlayer'].currentValue != change['namePlayer'].previousValue) {
-      console.log("search button")
-    }
+  ngOnChanges() {
+    setTimeout(() => {
+      console.log("--changes--");
+      this.serviceMatch.getLastMatch().subscribe(data => {
+        this.lasMatches = data
+        console.log(data)
+      })
+    },1000)
   }
+
 
   summaryDamage() {
-    this.serviceMatch.getSummaryDamage('1700021344065').subscribe(data => console.log(data))
+
   }
 
+  ngAfterViewInit(){
+    console.log("--afterView-init--")
+  }
 
 
 }
