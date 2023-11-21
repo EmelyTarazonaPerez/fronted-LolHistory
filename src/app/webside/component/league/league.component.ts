@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LeagueEntry } from 'src/app/model/leagueEntry';
 import { ProfileService } from 'src/app/service/profile/profile.service';
 
@@ -10,11 +10,18 @@ import { ProfileService } from 'src/app/service/profile/profile.service';
 export class LeagueComponent {
 
   leaguePlayer!: LeagueEntry[]
+  @Input() namePlayer!: String
 
   constructor(private serviceProfile: ProfileService) { }
 
-  ngOnInit(): void {
-      this.serviceProfile.getLeaguePlayer('GatitaRosh').subscribe(
+  ngOnChanges(){
+    this.serviceProfile.getLeaguePlayer(this.namePlayer).subscribe(
       data => this.leaguePlayer =data)
   }
+
+  ngOnInit(): void {
+      this.serviceProfile.getLeaguePlayer(this.namePlayer).subscribe(
+      data => this.leaguePlayer =data)
+  }
+
 }
