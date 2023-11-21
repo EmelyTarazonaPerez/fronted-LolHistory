@@ -10,7 +10,6 @@ export class ProgressComponent {
   @Input() porcentageWins !: number;
 
   ngOnInit(){
-    console.log(this.porcentageWins)
   }
 
 }
