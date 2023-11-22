@@ -3,11 +3,11 @@ import { GameHistoryService } from 'src/app/service/match/game-history.service';
 import { ProfileService } from 'src/app/service/profile/profile.service';
 
 @Component({
-  selector: 'app-nabvar',
-  templateUrl: './nabvar.component.html',
-  styleUrls: ['./nabvar.component.scss']
+  selector: 'app-search-player',
+  templateUrl: './search-player.component.html',
+  styleUrls: ['./search-player.component.scss']
 })
-export class NabvarComponent {
+export class SearchPlayerComponent {
 
   names:String = '';
 
@@ -16,7 +16,4 @@ export class NabvarComponent {
   searchPlayer(){
     this.profile.namePlayer.next(this.names)
   }
-
-
-
 }

@@ -4,11 +4,13 @@ import { WebsideRoutingModule } from './webside-routing.module';
 import { AccountComponent } from './page/account/account.component';
 import { ProfileComponent } from '../webside/component/profile/profile.component';
 import { ShareModule } from '../share/share.module';
-import { ProgressComponent } from '../share/component/progress.component';
+import { ProgressComponent } from '../share/component/progress/progress.component';
 import { GameHistoryComponent } from './component/game-history/game-history.component';
 import { LeagueComponent } from './component/league/league.component';
 import {QueueTypePipe} from '../pipe/queue-type.pipe'
 import { HomeComponent } from './page/home/home.component';
+import { SearchPlayerComponent } from './component/search-player/search-player.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { HomeComponent } from './page/home/home.component';
     GameHistoryComponent,
     LeagueComponent,
     QueueTypePipe,
-    HomeComponent
+    HomeComponent,
+    SearchPlayerComponent
 
   ],
   imports: [
     CommonModule,
     WebsideRoutingModule,
-    ShareModule
+    ShareModule,
+    FormsModule
   ]
 })
 export class WebsideModule { }

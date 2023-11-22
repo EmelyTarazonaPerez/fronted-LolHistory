@@ -1,0 +1,32 @@
+@import './../../../share/themes/variables';
+
+.container_home {
+  position: relative;
+}
+
+.home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title_home {
+  font-size: 30px;
+  font-weight: 800;
+  color: $bg-text;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  color: $bg-text;
+  text-align: center;
+}
+
+.span_home {
+  font-size: 30px;
+  font-weight: 800;
+  color: $text-focus;
+  text-align: center;
+}
