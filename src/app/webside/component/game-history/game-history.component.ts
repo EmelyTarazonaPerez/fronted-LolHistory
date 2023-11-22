@@ -17,6 +17,7 @@ export class GameHistoryComponent {
   constructor(private serviceMatch: GameHistoryService, private profile: ProfileService) { }
 
   ngOnChanges() {
+    this.lasMatches = []
     setTimeout(() => {
       console.log("--changes--");
       this.serviceMatch.getLastMatch().subscribe(data => {
