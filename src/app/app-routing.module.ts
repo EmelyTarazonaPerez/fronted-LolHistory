@@ -5,7 +5,8 @@ const routes: Routes = [
 {
   path:'',
   loadChildren: ()=> import('./webside/webside.module').then(m => m.WebsideModule)
-}
+},
+
 
 ];
 

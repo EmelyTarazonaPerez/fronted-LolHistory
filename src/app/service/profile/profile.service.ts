@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Profile } from "../../model/profile"
 import { LeagueEntry } from '../../model/leagueEntry';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,13 @@ export class ProfileService {
 
   getLeaguePlayer(namePlayer:String) {
     return this.http.get<LeagueEntry[]>(`servidor/account/league/${namePlayer}`)
+  }
+
+  getLoginAndMatch(name : String) {
+    return this.getAccount(name)
+      .pipe(
+        switchMap(() => this.getLeaguePlayer(name))
+      )
   }
 
 

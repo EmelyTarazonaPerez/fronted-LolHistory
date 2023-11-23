@@ -1,0 +1,31 @@
+@import './../../../share/themes/variables';
+
+button {
+  color: #673AB7;
+  font-weight: 700;
+  margin: 10px;
+  background: $text-focus;
+  font-size: 18px;
+}
+
+input {
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+}
+
+input::placeholder {
+  font-size: 15px;
+  padding-left: 25px;
+}
+
+.group-input {
+  position: relative;
+}
+
+.icono {
+  position: absolute;
+  left: 10px;
+  margin-top: 25px;
+  color: $bg-text;
+}

@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './component/profile/profile.component';
-import { HomeComponent} from '../../app/webside/page/home/home.component'
+import { AccountComponent } from './page/account/account.component'
+import { HomeComponent } from './page/home/home.component';
+import { LayoutComponent } from './layout/layout.component'
 
 const routes: Routes = [
-  { path: '', component: HomeComponent ,
-  children: [
-    {path:'', redirectTo: 'profile', pathMatch:'full'}
-  ]}
+  {
+    path: '', component: LayoutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'profile', component: AccountComponent }
+    ]
+  }
 ];
 
 @NgModule({

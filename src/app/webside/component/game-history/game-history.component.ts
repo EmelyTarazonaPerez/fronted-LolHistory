@@ -17,11 +17,10 @@ export class GameHistoryComponent {
   constructor(private serviceMatch: GameHistoryService, private profile: ProfileService) { }
 
   ngOnChanges() {
+    this.lasMatches = []
     setTimeout(() => {
-      console.log("--changes--");
       this.serviceMatch.getLastMatch().subscribe(data => {
         this.lasMatches = data
-        console.log(data)
       })
     },1000)
   }
@@ -31,9 +30,6 @@ export class GameHistoryComponent {
 
   }
 
-  ngAfterViewInit(){
-    console.log("--afterView-init--")
-  }
 
 
 }
