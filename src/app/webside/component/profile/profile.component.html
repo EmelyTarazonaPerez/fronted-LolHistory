@@ -1,12 +1,18 @@
-<div class="card card_body p-3" style="width: 18rem;">
-  <div class="card-body">
-    <section>
-      <figure class="d-flex align-items-center justify-content-center">
-        <img class="card-body_img" src="{{accountPlayer.linkIcono}}" alt="icono_perfil" />
-      </figure>
-      <h2 class="card-body_title">{{accountPlayer.name}}</h2>
-      <p class="card-body_level" style="color: aliceblue;">Nivel {{accountPlayer.summonerLevel}}</p>
-    </section>
-    <app-league [namePlayer]="namePlayer"></app-league>
+<div *ngIf="statusText">
+  <div class="card card_body p-3" style="width: 18rem;">
+    <div class="card-body">
+      <section>
+        <figure class="d-flex align-items-center justify-content-center">
+          <img class="card-body_img" src="{{accountPlayer.linkIcono}}" alt="icono_perfil" />
+        </figure>
+        <h2 class="card-body_title">{{accountPlayer.name}}</h2>
+        <p class="card-body_level" style="color: aliceblue;">Nivel {{accountPlayer.summonerLevel}}</p>
+      </section>
+      <app-league [namePlayer]="namePlayer"></app-league>
+    </div>
   </div>
 </div>
+<div *ngIf="!statusText">
+<h1 style="color: aliceblue;">Ups!.. no se encontro jugador</h1>
+</div>
+
