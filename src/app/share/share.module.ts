@@ -4,6 +4,7 @@ import { ProgressComponent } from './component/progress/progress.component';
 import { NabvarComponent } from './component/nabvar/nabvar.component';
 import { FormsModule } from '@angular/forms';
 import { SpinnerComponent } from './component/spinner/spinner.component';
+import { ChartBartComponent } from './component/chart-bart/chart-bart.component';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { SpinnerComponent } from './component/spinner/spinner.component';
     ProgressComponent,
     NabvarComponent,
     SpinnerComponent,
+    ChartBartComponent,
   ],
   imports: [
     CommonModule,
