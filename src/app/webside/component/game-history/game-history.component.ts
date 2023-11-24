@@ -21,14 +21,16 @@ export class GameHistoryComponent {
     setTimeout(() => {
       this.serviceMatch.getLastMatch().subscribe(data => {
         this.lasMatches = data
+        console.log(data)
       })
-    },1000)
-  }
+  }, 1000)
+
+}
 
 
-  summaryDamage() {
+summaryDamage() {
 
-  }
+}
 
 
 

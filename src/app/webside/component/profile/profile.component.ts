@@ -13,7 +13,7 @@ export class ProfileComponent {
   porcentageWins: number = 50;
   accountPlayer!: Profile;
   namePlayer: String = 'GatitaRosh';
-  statusText = false
+  statusText!: String | boolean
 
   constructor(private serviceProfile: ProfileService) { }
 
@@ -23,7 +23,6 @@ export class ProfileComponent {
         this.accountPlayer = resp
         this.statusText = true
       }, error => {
-        console.log(error.statusText)
         this.statusText = false
       })
       this.namePlayer = data

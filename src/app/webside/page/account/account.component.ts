@@ -13,5 +13,16 @@ import { ProfileService } from 'src/app/service/profile/profile.service';
 })
 export class AccountComponent {
 
+  namePlayer!: String;
+  constructor(private serviceProfile: ProfileService, private match: GameHistoryService) { }
+  textStatus!: boolean;
 
+  ngOnInit(): void {
+    this.serviceProfile.namePlayer$.subscribe(data => {
+      this.namePlayer = data
+      this.serviceProfile.getAccount(this.namePlayer).subscribe(() => {
+      }, error => { this.textStatus = true });
+    })
+  }
 }
+
