@@ -11,6 +11,8 @@ import { HomeComponent } from './page/home/home.component';
 import { SearchPlayerComponent } from './component/search-player/search-player.component';
 import { FormsModule } from '@angular/forms';
 import { LayoutComponent } from './layout/layout.component'
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SpinnerInterceptorInterceptor } from '../interceptor/spinner-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,9 @@ import { LayoutComponent } from './layout/layout.component'
     WebsideRoutingModule,
     ShareModule,
     FormsModule
+  ],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptorInterceptor, multi: true}
   ]
 })
 export class WebsideModule { }

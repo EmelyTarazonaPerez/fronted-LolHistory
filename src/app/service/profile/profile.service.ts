@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Profile } from "../../model/profile"
 import { LeagueEntry } from '../../model/leagueEntry';
-import { BehaviorSubject, switchMap } from 'rxjs';
+import { BehaviorSubject, Subject, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

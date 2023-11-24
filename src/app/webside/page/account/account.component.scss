@@ -1,3 +1,20 @@
+@import './../../../share/themes/variables';
+
+._error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title_error {
+  font-size: 30px;
+  font-weight: 800;
+  color: $bg-text;
+  text-align: center;
+}
+
+
 body {
   background-color:  #140e30;
   font-family: 'Poppins', sans-serif !important;
