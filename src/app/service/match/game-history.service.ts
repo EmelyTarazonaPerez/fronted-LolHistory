@@ -21,7 +21,7 @@ export class GameHistoryService {
     )
   }
 
-  getSummaryDamage (startTime : string) {
+  getSummaryDamage (startTime : number) {
     return this.http.get<SummaryDamage[]>(`servidor/summary-damage/${startTime}`)
   }
 

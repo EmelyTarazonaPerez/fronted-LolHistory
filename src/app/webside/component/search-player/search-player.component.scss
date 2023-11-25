@@ -11,11 +11,12 @@ button {
 input {
   border-radius: 8px;
   border: none;
-  padding: 5px;
+  padding: 8px;
+
 }
 
 input::placeholder {
-  font-size: 15px;
+  font-size: 12px;
   padding-left: 25px;
 }
 

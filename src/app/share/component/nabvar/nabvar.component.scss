@@ -16,6 +16,7 @@ button {
 
 input {
   background-color: $bg-body;
+  color: $text-focus;
   border: none;
   margin: 10px;
   padding: 7.5px 7.5px 7.5px 40px;
@@ -28,16 +29,16 @@ input::placeholder {
   color: $bg-text;
 }
 
-input:focus{
+input:focus {
   color: $text-focus;
 }
 
-button:hover{
+button:hover {
   color: #fff;
   background-color: #3A4556 !important;
 }
 
-.box-share-player{
+.box-share-player {
   padding-left: 60px;
 }
 
@@ -47,7 +48,7 @@ button:hover{
 
 .icono {
   position: absolute;
-  left: 10px;
-  margin-top: 25px;
+  left: 20px;
+  margin-top: 22px;
   color: $bg-text;
 }

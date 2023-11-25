@@ -13,6 +13,7 @@ export class GameHistoryComponent {
 
   lasMatches!: LastMatches[]
   @Input() namePlayer!: String;
+  showDetail!: boolean
 
   constructor(private serviceMatch: GameHistoryService, private profile: ProfileService) { }
 
@@ -28,9 +29,7 @@ export class GameHistoryComponent {
 }
 
 
-summaryDamage() {
 
-}
 
 
 

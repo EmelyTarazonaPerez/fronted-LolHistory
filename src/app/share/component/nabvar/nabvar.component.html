@@ -1,7 +1,7 @@
 <header class=" container d-flex align-items-center justify-content-between">
-    <a  href=" " class="title_LolHistory">Lol-History</a>
+    <a  href="" class="title_LolHistory">Lol-History</a>
     <div class="group-input">
-      <input placeholder="Search" [(ngModel)]="names"/>
+      <input  (keyup.enter)="searchPlayer()" placeholder="Search" [(ngModel)]="names"/>
       <i class="fa-solid fa-magnifying-glass icono"></i>
       <button class="btn" (click)="searchPlayer()">Search!</button>
     </div>

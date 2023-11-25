@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { LayoutComponent } from './layout/layout.component'
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptorInterceptor } from '../interceptor/spinner-interceptor.interceptor';
+import { GamesComponent } from './component/games/games.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SpinnerInterceptorInterceptor } from '../interceptor/spinner-intercepto
     QueueTypePipe,
     HomeComponent,
     SearchPlayerComponent,
-    LayoutComponent
+    LayoutComponent,
+    GamesComponent
 
   ],
   imports: [
