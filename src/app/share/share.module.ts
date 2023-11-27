@@ -21,7 +21,8 @@ import { ChartBartComponent } from './component/chart-bart/chart-bart.component'
   exports: [
     ProgressComponent,
     NabvarComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ChartBartComponent
   ]
 })
 export class ShareModule { }

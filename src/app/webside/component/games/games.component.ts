@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { LastMatches } from 'src/app/model/lastMatches';
 import { GameHistoryService } from 'src/app/service/match/game-history.service';
 
@@ -14,7 +14,7 @@ export class GamesComponent {
   constructor(private serviceMatch : GameHistoryService){
   }
 
-  summaryDamage(gameStartTimestamp : number) {
-    this.serviceMatch.getSummaryDamage(gameStartTimestamp).subscribe( data => {console.log(data), this.showDetail = true} )
+  showDivDetail(date : number) {
+    this.showDetail = true
   }
 }

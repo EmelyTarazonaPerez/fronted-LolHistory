@@ -18,6 +18,5 @@ export class SpinnerInterceptorInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       finalize(()=> this.spinnerSvc.hide())
     )
-    return next.handle(request);
   }
 }

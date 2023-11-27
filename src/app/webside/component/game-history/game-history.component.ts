@@ -11,17 +11,17 @@ import { ProfileService } from 'src/app/service/profile/profile.service';
 })
 export class GameHistoryComponent {
 
-  lasMatches!: LastMatches[]
+  lastMatches!: LastMatches[]
   @Input() namePlayer!: String;
   showDetail!: boolean
 
   constructor(private serviceMatch: GameHistoryService, private profile: ProfileService) { }
 
   ngOnChanges() {
-    this.lasMatches = []
+    this.lastMatches = []
     setTimeout(() => {
       this.serviceMatch.getLastMatch().subscribe(data => {
-        this.lasMatches = data
+        this.lastMatches = data
         console.log(data)
       })
   }, 1000)

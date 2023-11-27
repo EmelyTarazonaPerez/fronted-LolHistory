@@ -4,6 +4,7 @@
   font-size: 30px;
   font-weight: 800;
   color: $bg-text;
+  text-decoration: none;
 }
 
 button {
@@ -27,6 +28,7 @@ input {
 
 input::placeholder {
   color: $bg-text;
+  font-size: 13px;
 }
 
 input:focus {

@@ -1,7 +1,7 @@
 <div [ngClass]="{'active': match.info.participants[0].win === true}" class="card container-h m-2">
   <div class="p-lg-1 p-0 d-flex justify-content-between align-items-center info-game">
     <p style="font-size: 10px;">{{match.info.gameMode}}</p>
-    <button class="btn m-0 p-0" (click)="summaryDamage(match.info.gameStartTimestamp)">Detail</button>
+    <button class="btn m-0 p-0" (click)="showDivDetail(match.info.gameStartTimestamp)">Detail</button>
   </div>
   <div class="card-body p-0">
     <div class="champion-img__container">
@@ -39,7 +39,13 @@
     </section>
     <p class="footer" style="font-size: 10px; padding-right: 5px">3 de octubre 2023</p>
   </div>
-  <div *ngIf="showDetail">
-    <h1 style="color: aliceblue;">Here go detail</h1>
-  </div>
 </div>
+  <div *ngIf="showDetail">
+    <div style="width: 300px;">
+      <div>
+        <app-chart-bart [date]="match.info.gameStartTimestamp"></app-chart-bart>
+      </div>
+    </div>
+  </div>
+
+
