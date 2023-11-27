@@ -1,48 +1,6 @@
-  <article>
-    <app-spinner></app-spinner>
-    <div *ngFor="let match of lasMatches">
-      <div [ngClass]="{'active': match.info.participants[0].win === true}" class="card container-h m-2">
-        <div class="p-lg-1 p-0 d-flex justify-content-between align-items-center info-game">
-          <p style="font-size: 10px;">{{match.info.gameMode}}</p>
-          <button class="btn m-0 p-0" (click)="summaryDamage()">Detail</button>
-        </div>
-        <div class="card-body p-0">
-          <div class="champion-img__container">
-            <img class="img"
-              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{match.info.participants[0].championName}}_0.jpg"
-              alt="champion image" />
-          </div>
-          <section class="game-info__container  d-flex">
-            <figure class="icono-champion__container d-flex">
-              <div>
-                <img class="champion-icon" src="{{match.info.participants[0].iconoChampion}}" alt="mvc" />
-                <b class="figure-mvc">MVC</b>
-              </div>
-              <div class="spell-icon__container">
-                <img class="spell-icon" src="{{match.info.participants[0].iconSummoner1Id}}" alt="summoner-1"/>
-                <img class="spell-icon" src="{{match.info.participants[0].iconSummoner2Id}}" alt="summoner-2"/>
-              </div>
-            </figure>
-            <article class="summary-game__container d-flex">
-              <div class="summary-kda">
-                <strong>KDA</strong>
-                <p>
-                  {{match.info.participants[0].kills}}/{{match.info.participants[0].deaths}}/{{match.info.participants[0].assists}}
-                </p>
-              </div>
-              <div class="summary-damage">
-                <strong>Daño</strong>
-                <p>{{match.info.participants[0].totalDamageDealtToChampions}}</p>
-              </div>
-              <div>
-                <p class="summary-percent">{{match.info.participants[0].challenges.killParticipation| percent}}P. Kills</p>
-              </div>
-            </article>
-          </section>
-          <p class="footer" style="font-size: 10px; padding-right: 5px">3 de octubre 2023</p>
-        </div>
-      </div>
-    </div>
-  </article>
-
-
+<article>
+  <app-spinner></app-spinner>
+  <div *ngFor="let match of lastMatches">
+    <app-games [match]="match"></app-games>
+  </div>
+</article>

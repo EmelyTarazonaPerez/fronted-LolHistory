@@ -20,8 +20,9 @@ export class AccountComponent {
   ngOnInit(): void {
     this.serviceProfile.namePlayer$.subscribe(data => {
       this.namePlayer = data
-      this.serviceProfile.getAccount(this.namePlayer).subscribe(() => {
-      }, error => { this.textStatus = true });
+      console.log(data)
+      this.serviceProfile.getAccount(this.namePlayer).subscribe(
+        (data) => { console.log(data), this.textStatus = false}, error => { this.textStatus = true, console.log(error) });
     })
   }
 }

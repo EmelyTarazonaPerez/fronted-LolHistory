@@ -15,7 +15,6 @@ export class NabvarComponent {
   constructor(private profile: ProfileService, private match : GameHistoryService){}
 
   searchPlayer(){
-    console.log('hola')
     console.log(this.names)
     this.profile.namePlayer.next(this.names)
   }
