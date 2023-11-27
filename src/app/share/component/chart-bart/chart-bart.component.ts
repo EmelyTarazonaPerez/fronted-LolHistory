@@ -31,7 +31,7 @@ export class ChartBartComponent {
     const data = {
       labels: ['','','','','','','','','',''],
       datasets: [{
-        label: '# of Votes',
+        label: 'Damage',
         data: damages,
         backgroundColor: [
           '#0096888f',
@@ -45,7 +45,7 @@ export class ChartBartComponent {
           '#B7253F',
           '#B7253F'
         ],
-        borderWidth: 1,
+        borderWidth: 2,
       }]
     }
 
