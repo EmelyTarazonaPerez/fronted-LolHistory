@@ -25,7 +25,7 @@ import { GamesComponent } from './component/games/games.component';
     HomeComponent,
     SearchPlayerComponent,
     LayoutComponent,
-    GamesComponent
+    GamesComponent,
 
   ],
   imports: [
