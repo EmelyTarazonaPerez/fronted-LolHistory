@@ -10,11 +10,11 @@ import { GameHistoryService } from 'src/app/service/match/game-history.service';
 export class GamesComponent {
 
   @Input() match!: LastMatches
-  showDetail!:boolean
+  showDetail:boolean = false
   constructor(private serviceMatch : GameHistoryService){
   }
 
   showDivDetail(date : number) {
-    this.showDetail = true
+    this.showDetail = !this.showDetail
   }
 }

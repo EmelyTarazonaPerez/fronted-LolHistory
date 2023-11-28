@@ -40,12 +40,6 @@
     <p class="footer" style="font-size: 10px; padding-right: 5px">3 de octubre 2023</p>
   </div>
 </div>
-  <div *ngIf="showDetail">
-    <div style="width: 300px;">
-      <div>
-        <app-chart-bart [date]="match.info.gameStartTimestamp"></app-chart-bart>
-      </div>
-    </div>
-  </div>
-
-
+<div *ngIf="showDetail">
+  <app-chart-bart [date]="match.info.gameStartTimestamp" [iconoChamp]="match.info.participants[0].iconoChampion"></app-chart-bart>
+</div>
