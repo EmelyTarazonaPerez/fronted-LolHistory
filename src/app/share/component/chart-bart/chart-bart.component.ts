@@ -15,13 +15,13 @@ export class ChartBartComponent implements OnChanges, AfterViewInit {
   @Input() iconoChamp!: String
   @Input() showDetail!: boolean
 
-  colorColumsPlayer: String = '#F8F206'
+  colorColumsPlayer: String = '#f2bf43'
   colorColumnsParticipant = [
-    '#0096888f',
-    '#0096888f',
-    '#0096888f',
-    '#0096888f',
-    '#0096888f',
+    '#0077c7a3',
+    '#0077c7a3',
+    '#0077c7a3',
+    '#0077c7a3',
+    '#0077c7a3',
     '#B7253F',
     '#B7253F',
     '#B7253F',
@@ -62,7 +62,18 @@ export class ChartBartComponent implements OnChanges, AfterViewInit {
       datasets: [{
         label: 'Damage',
         data: damages,
-        backgroundColor: this.colorColumnsParticipant,
+        backgroundColor : [
+          '#0077c7a3',
+          '#0077c7a3',
+          '#0077c7a3',
+          '#0077c7a3',
+          '#0077c7a3',
+          '#B7253F',
+          '#B7253F',
+          '#B7253F',
+          '#B7253F',
+          '#B7253F'
+        ],
         borderWidth: 2,
         borderRadius: 5,
         borderColor: this.colorColumnsParticipant
@@ -77,7 +88,7 @@ export class ChartBartComponent implements OnChanges, AfterViewInit {
         names.forEach((image, index) => {
           const label = new Image();
           label.src = image as string
-          const width = 25;
+          const width = 30;
           ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
         })
       }
