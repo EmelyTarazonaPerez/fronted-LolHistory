@@ -2,7 +2,7 @@
 Created application consuming an api service called "Api-Backend-LolHistory.
 
 ## DEMO
-[![Mirar video]([https://i.stack.imgur.com/Vp2cE.png)](https://youtu.be/vt5fpE0bzSY](https://sharing.clickup.com/clip/p/t9002026736/fa424654-1e8c-4e9a-b068-b0e0ec2389b8/screen-recording-2023-12-15-15:32.webm))
+[![Mirar video](https://sharing.clickup.com/clip/p/t9002026736/fa424654-1e8c-4e9a-b068-b0e0ec2389b8/screen-recording-2023-12-15-15:32.webm)
 
 ## General objective 
 - Summary of games and player data
